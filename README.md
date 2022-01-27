@@ -19,5 +19,5 @@ mochawesome-merge | 4.2.0
 Execute the following command to pull the latest image.
 
 ```bash
-docker pull 0xislamtaha/cypress-snapshot-image:chrome94-ff93-cy9.1.1
+docker pull 0xislamtaha/cypress-snapshot-image:chrome95-ff97-cy9.3.1
 ```
