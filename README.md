@@ -6,19 +6,31 @@ This [image](https://hub.docker.com/r/0xislamtaha/cypress-snapshot-image) provid
 ## Content:
 Spec | Version 
 --- | --- 
-Cypress | 9.1.1
-Chrome | 94
-FireFox | 93
+Cypress | 9.3.1
+Chrome | 95
+FireFox | 97
 cypress-image-snapshot | 4.0.1+
 mocha | 8.4.0
 mochawesome | 6.2.2
 mochawesome-merge | 4.2.0
-testing-library/cypress | 8.0.2
+@testing-library/cypress |  ^8.0.2
+eslint-plugin-cypress  | ^2.12.1
+lodash | ^4.17.21
 
 ## Usage:
 
-Execute the following command to pull the latest image.
+1- Execute the following command to pull the latest image.
 
 ```bash
-docker pull 0xislamtaha/cypress-snapshot-image:chrome94-ff93-cy9.1.1
+docker pull 0xislamtaha/cypress-snapshot-image:chrome95-ff97-cy9.3.1
+```
+
+2- Run cypress as root
+```bash
+docker run 0xislamtaha/cypress-snapshot-image:chrome95-ff97-cy9.3.1 bash -c "npx cypress -v"
+```
+
+3- Run cypress as non-root
+```bash
+docker run -u node 0xislamtaha/cypress-snapshot-image:chrome95-ff97-cy9.3.1 bash -c "npx cypress -v"
 ```
